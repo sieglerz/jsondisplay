@@ -11,19 +11,20 @@
 <body>
 <div class="container" id="app">
     <h3 class="text-center">Cryptocurrency Pricing</h3>
-    <div class="columns medium-4" v-for="(result, index) in results">
+
+    <div class="columns medium-4" v-for="builder in builderData.results">
         <div class="card">
             <div class="card-section">
-                <p> {{ index }}  </p>
+                <p> {{ builder.name }}  </p>
             </div>
             <div class="card-divider">
-                <p>$ {{ result.USD }}</p>
+                <p> {{ builder.id }}</p>
             </div>
             <div class="card-section">
-                <p>&euro; {{ result.EUR }}</p>
+<!--                <p>&euro; {{ result.EUR }}</p>-->
             </div>
             <div class="card-divider">
-                <p>{{ result.BIT }} BIT</p>
+<!--                <p>{{ result.BIT }} BIT</p>-->
             </div>
         </div>
     </div>
