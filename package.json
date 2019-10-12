@@ -1,0 +1,9 @@
+{
+  "name": "jsondisplay",
+  "version": "1.0.0",
+  "description": "table list of objects",
+  "main": "index.js",
+  "repository": "https://github.com/sieglerz/jsondisplay.git",
+  "author": "Zac Siegler <zac.siegler10@gmail.com>",
+  "license": "MIT"
+}

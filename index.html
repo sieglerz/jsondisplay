@@ -10,21 +10,25 @@
 
 <body>
 <div class="container" id="app">
-    <h3 class="text-center">Cryptocurrency Pricing</h3>
+    <h3 class="text-center">{{ rauschColemanComms.name }} Communities</h3>
 
-    <div class="columns medium-4" v-for="builder in builderData.results">
+    <div class="columns medium-4" v-for="community in rauschColemanComms.communities">
         <div class="card">
             <div class="card-section">
-                <p> {{ builder.name }}  </p>
+                <p> {{ community.name }}  </p>
             </div>
             <div class="card-divider">
-                <p> {{ builder.id }}</p>
+                <p> Starting at ${{ community.min_plan_price }}<br />
+                    Max Base Price: ${{ community.max_plan_price }}</p>
             </div>
             <div class="card-section">
-<!--                <p>&euro; {{ result.EUR }}</p>-->
+                <p>{{ community.information}}</p>
+
+
             </div>
             <div class="card-divider">
-<!--                <p>{{ result.BIT }} BIT</p>-->
+                <p>PLANS & BASE PRICES</p>
+
             </div>
         </div>
     </div>

@@ -25,7 +25,8 @@ const builderData = {
             "name": "Rausch Coleman"
         }
     ]
-}
+};
+
 
 for (i in builderData.results) {
     x = builderData.results[i].name;
@@ -36,7 +37,7 @@ console.log(builderData.results[2].name, builderData.results[2].id);
 
 
 //The below const and for work to log all names of communities
-const rauschColemanCommunities = {
+const rauschColemanComms = {
     "id": 3,
     "name": "Rausch Coleman",
     "production": true,
@@ -417,25 +418,24 @@ const rauschColemanCommunities = {
         }
     ]
 }
-for (i in rauschColemanCommunities.communities) {
-    x = rauschColemanCommunities.communities[i].name;
+for (i in rauschColemanComms.communities) {
+    x = rauschColemanComms.communities[i].name;
     // console.log(x);
 }
-for (i in rauschColemanCommunities.communities) {
-    y = rauschColemanCommunities.communities[i].zip_code;
+for (i in rauschColemanComms.communities) {
+    y = rauschColemanComms.communities[i].zip_code;
     // console.log(y);
 }
 
-const bar = "Socks";
+
 const vm = new Vue({
     el: '#app',
 
     data: {
-        builderData: {},
-        foo: bar
+        rauschColemanComms: {},
     },
     mounted() {
-        this.builderData = builderData;
+        this.rauschColemanComms = rauschColemanComms;
     }
     // mounted() {
     //     axios.get(cryptoURL).then(builders => {
@@ -443,6 +443,37 @@ const vm = new Vue({
     //     })
     // }
 });
+
+
+function loadJSON(callback) {
+
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'plans.json', false); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(xobj.response);
+        }
+    };
+    xobj.send(null);
+}
+
+loadJSON(results  => {
+    console.log(JSON.parse(results));
+})
+
+const fruits = ["apple", "banana", "jackfruit", "honeycrips"];
+
+const afruits = fruits.filter(fruit => {
+    return fruit.indexOf("a") >= 0;
+});
+
+console.log(afruits);
+
+
+
+
 
 //Mock data for the value of BTC in USD - (Can go after results: )
 //{"BTC": {"USD":3759.91,"EUR":3166.21}, "ETH": {"USD":281.7,"EUR":236.25}, "NEW Currency": {"USD": 5.60, "EUR": 4.70}
