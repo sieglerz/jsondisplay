@@ -1,5 +1,3 @@
-const cryptoURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,REP,DASH&tsyms=USD,EUR,BIT";
-
 const builderData = {
     "total_count": 5,
     "page": 1,
@@ -26,14 +24,11 @@ const builderData = {
         }
     ]
 };
-
-
 for (i in builderData.results) {
     x = builderData.results[i].name;
     // console.log(x);
 }
 
-console.log(builderData.results[2].name, builderData.results[2].id);
 
 
 //The below const and for work to log all names of communities
@@ -428,6 +423,912 @@ for (i in rauschColemanComms.communities) {
 }
 
 
+//This function and the result variable beneath it allow us to filter the plans by community
+const plans = {
+    "total_count":44,
+    "page":1,
+    "results":[
+        {
+            "id":20,
+            "collection_id":2,
+            "name":"Sonya",
+            "min_price":"324990.0",
+            "min_sqft":2028,
+            "min_width":50,
+            "min_depth":66,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"3.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":211,
+            "is_published":true,
+            "page_slug":"Sonya-Bexar-Texas-78109",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/20/mobile_full_Sonya_A.jpg?1558131654",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/20/mobile_half_Sonya_A.jpg?1558131654",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/20/mobile_thumbnail_Sonya_A.jpg?1558131654",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/20/desktop_full_Sonya_A.jpg?1558131654",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/20/desktop_half_Sonya_A.jpg?1558131654",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/20/desktop_thumbnail_Sonya_A.jpg?1558131654",
+            "available_communities":[
+                {
+                    "id":22,
+                    "name":"Turning Stone"
+                },
+                {
+                    "id":15,
+                    "name":"Horizon Pointe - Enclave"
+                }
+            ]
+        },
+        {
+            "id":3,
+            "collection_id":1,
+            "name":"The Aristo",
+            "min_price":"335990.0",
+            "min_sqft":2347,
+            "min_width":49,
+            "min_depth":65,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"3.0",
+            "min_garage":"2.0",
+            "max_garage":"3.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":33,
+            "is_published":true,
+            "page_slug":"The-Aristo-New-Braunfels-Comal-Texas-78130",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/3/mobile_full_Aristo_A.jpg?1558125615",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/3/mobile_half_Aristo_A.jpg?1558125615",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/3/mobile_thumbnail_Aristo_A.jpg?1558125615",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/3/desktop_full_Aristo_A.jpg?1558125615",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/3/desktop_half_Aristo_A.jpg?1558125615",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/3/desktop_thumbnail_Aristo_A.jpg?1558125615",
+            "available_communities":[
+                {
+                    "id":8,
+                    "name":"Highland Grove Platinum Series"
+                }
+            ]
+        },
+        {
+            "id":4,
+            "collection_id":1,
+            "name":"The Avondale",
+            "min_price":"233000.0",
+            "min_sqft":2754,
+            "min_width":35,
+            "min_depth":62,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"5.0",
+            "min_bathrooms":"3.5",
+            "max_bathrooms":"4.0",
+            "min_garage":"2.0",
+            "max_garage":"3.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":51,
+            "is_published":true,
+            "page_slug":"The-Avondale-San-Antonio-Bexar-Texas-78244",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/4/mobile_full_Avondale_G.jpg?1558125722",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/4/mobile_half_Avondale_G.jpg?1558125722",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/4/mobile_thumbnail_Avondale_G.jpg?1558125722",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/4/desktop_full_Avondale_G.jpg?1558125722",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/4/desktop_half_Avondale_G.jpg?1558125722",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/4/desktop_thumbnail_Avondale_G.jpg?1558125722",
+            "available_communities":[
+                {
+                    "id":6,
+                    "name":"Meadow Park"
+                },
+                {
+                    "id":7,
+                    "name":"Northeast Crossing"
+                },
+                {
+                    "id":9,
+                    "name":"Preston Estates"
+                },
+                {
+                    "id":5,
+                    "name":"Summerhill"
+                }
+            ]
+        },
+        {
+            "id":38,
+            "collection_id":4,
+            "name":"Ross",
+            "min_price":"186490.0",
+            "min_sqft":1480,
+            "min_width":41,
+            "min_depth":53,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"3.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":148,
+            "is_published":true,
+            "page_slug":"Ross-New-Braunfels-Comal-Texas-78130",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/38/mobile_full_RC-Ross-Home.jpg?1551589216",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/38/mobile_half_RC-Ross-Home.jpg?1551589216",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/38/mobile_thumbnail_RC-Ross-Home.jpg?1551589216",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/38/desktop_full_RC-Ross-Home.jpg?1551589216",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/38/desktop_half_RC-Ross-Home.jpg?1551589216",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/38/desktop_thumbnail_RC-Ross-Home.jpg?1551589216",
+            "available_communities":[
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":31,
+                    "name":"Horizon Pointe - Reserve"
+                }
+            ]
+        },
+        {
+            "id":9,
+            "collection_id":1,
+            "name":"The Asbury",
+            "min_price":"207000.0",
+            "min_sqft":1718,
+            "min_width":35,
+            "min_depth":68,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"3.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"3.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":12,
+            "is_published":true,
+            "page_slug":"The-Asbury-San-Antonio-Bexar-Texas-78244",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/9/mobile_full_Asbury_G.jpg?1558125636",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/9/mobile_half_Asbury_G.jpg?1558125636",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/9/mobile_thumbnail_Asbury_G.jpg?1558125636",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/9/desktop_full_Asbury_G.jpg?1558125636",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/9/desktop_half_Asbury_G.jpg?1558125636",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/9/desktop_thumbnail_Asbury_G.jpg?1558125636",
+            "available_communities":[
+                {
+                    "id":6,
+                    "name":"Meadow Park"
+                },
+                {
+                    "id":7,
+                    "name":"Northeast Crossing"
+                },
+                {
+                    "id":9,
+                    "name":"Preston Estates"
+                },
+                {
+                    "id":5,
+                    "name":"Summerhill"
+                },
+                {
+                    "id":1,
+                    "name":"Texas Research Park"
+                }
+            ]
+        },
+        {
+            "id":34,
+            "collection_id":4,
+            "name":"Cypress",
+            "min_price":"190490.0",
+            "min_sqft":1770,
+            "min_width":34,
+            "min_depth":70,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":117,
+            "is_published":true,
+            "page_slug":"Cypress-San-Antonio-Bexar-Texas-78205",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/34/mobile_full_RC-Cypress-Home.jpg?1551588980",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/34/mobile_half_RC-Cypress-Home.jpg?1551588980",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/34/mobile_thumbnail_RC-Cypress-Home.jpg?1551588980",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/34/desktop_full_RC-Cypress-Home.jpg?1551588980",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/34/desktop_half_RC-Cypress-Home.jpg?1551588980",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/34/desktop_thumbnail_RC-Cypress-Home.jpg?1551588980",
+            "available_communities":[
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":26,
+                    "name":"Heathers Place"
+                },
+                {
+                    "id":24,
+                    "name":"Crossings at Westlakes"
+                },
+                {
+                    "id":28,
+                    "name":"Heritage Oaks"
+                }
+            ]
+        },
+        {
+            "id":35,
+            "collection_id":4,
+            "name":"Hudson",
+            "min_price":"193490.0",
+            "min_sqft":1770,
+            "min_width":34,
+            "min_depth":67,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":128,
+            "is_published":true,
+            "page_slug":"Hudson-San-Antonio-Bexar-Texas-78205",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/35/mobile_full_RC-Hudson-Home.jpg?1551588992",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/35/mobile_half_RC-Hudson-Home.jpg?1551588992",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/35/mobile_thumbnail_RC-Hudson-Home.jpg?1551588992",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/35/desktop_full_RC-Hudson-Home.jpg?1551588992",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/35/desktop_half_RC-Hudson-Home.jpg?1551588992",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/35/desktop_thumbnail_RC-Hudson-Home.jpg?1551588992",
+            "available_communities":[
+                {
+                    "id":24,
+                    "name":"Crossings at Westlakes"
+                },
+                {
+                    "id":26,
+                    "name":"Heathers Place"
+                },
+                {
+                    "id":28,
+                    "name":"Heritage Oaks"
+                },
+                {
+                    "id":29,
+                    "name":"Horizon Pointe - Commons"
+                },
+                {
+                    "id":32,
+                    "name":"Texas Research Park"
+                }
+            ]
+        },
+        {
+            "id":18,
+            "collection_id":2,
+            "name":"Phillips",
+            "min_price":"261990.0",
+            "min_sqft":2459,
+            "min_width":34,
+            "min_depth":67,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"6.0",
+            "min_bathrooms":"3.5",
+            "max_bathrooms":"4.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":209,
+            "is_published":true,
+            "page_slug":"Phillips-Bexar-Texas-78221",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/18/mobile_full_Philips_A.jpg?1558131473",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/18/mobile_half_Philips_A.jpg?1558131473",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/18/mobile_thumbnail_Philips_A.jpg?1558131473",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/18/desktop_full_Philips_A.jpg?1558131473",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/18/desktop_half_Philips_A.jpg?1558131473",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/18/desktop_thumbnail_Philips_A.jpg?1558131473",
+            "available_communities":[
+                {
+                    "id":21,
+                    "name":"Hunters Ranch"
+                }
+            ]
+        },
+        {
+            "id":32,
+            "collection_id":4,
+            "name":"Barrington",
+            "min_price":"219490.0",
+            "min_sqft":2495,
+            "min_width":34,
+            "min_depth":53,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"2.5",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":94,
+            "is_published":true,
+            "page_slug":"Barrington-San-Antonio-Bexar-Texas-78205",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/32/mobile_full_RC-Barrington-Home.jpg?1558134066",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/32/mobile_half_RC-Barrington-Home.jpg?1558134066",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/32/mobile_thumbnail_RC-Barrington-Home.jpg?1558134066",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/32/desktop_full_RC-Barrington-Home.jpg?1558134066",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/32/desktop_half_RC-Barrington-Home.jpg?1558134066",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/32/desktop_thumbnail_RC-Barrington-Home.jpg?1558134066",
+            "available_communities":[
+                {
+                    "id":32,
+                    "name":"Texas Research Park"
+                },
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":31,
+                    "name":"Horizon Pointe - Reserve"
+                },
+                {
+                    "id":24,
+                    "name":"Crossings at Westlakes"
+                }
+            ]
+        },
+        {
+            "id":10,
+            "collection_id":1,
+            "name":"The Berkley",
+            "min_price":"210500.0",
+            "min_sqft":1749,
+            "min_width":35,
+            "min_depth":68,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"3.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":62,
+            "is_published":true,
+            "page_slug":"The-Berkley-San-Antonio-Bexar-Texas-78244",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/10/mobile_full_Berkley_A.jpg?1558125756",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/10/mobile_half_Berkley_A.jpg?1558125756",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/10/mobile_thumbnail_Berkley_A.jpg?1558125756",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/10/desktop_full_Berkley_A.jpg?1558125756",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/10/desktop_half_Berkley_A.jpg?1558125756",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/10/desktop_thumbnail_Berkley_A.jpg?1558125756",
+            "available_communities":[
+                {
+                    "id":6,
+                    "name":"Meadow Park"
+                },
+                {
+                    "id":7,
+                    "name":"Northeast Crossing"
+                },
+                {
+                    "id":4,
+                    "name":"Notting Hill"
+                },
+                {
+                    "id":9,
+                    "name":"Preston Estates"
+                },
+                {
+                    "id":5,
+                    "name":"Summerhill"
+                },
+                {
+                    "id":1,
+                    "name":"Texas Research Park"
+                }
+            ]
+        },
+        {
+            "id":5,
+            "collection_id":1,
+            "name":"The Ridgeview",
+            "min_price":"222000.0",
+            "min_sqft":2433,
+            "min_width":35,
+            "min_depth":62,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"5.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"3.0",
+            "min_garage":"2.0",
+            "max_garage":"3.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":72,
+            "is_published":true,
+            "page_slug":"The-Ridgeview-San-Antonio-Bexar-Texas-78244",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/5/mobile_full_Ridgeview_G.jpg?1558125795",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/5/mobile_half_Ridgeview_G.jpg?1558125795",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/5/mobile_thumbnail_Ridgeview_G.jpg?1558125795",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/5/desktop_full_Ridgeview_G.jpg?1558125795",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/5/desktop_half_Ridgeview_G.jpg?1558125795",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/5/desktop_thumbnail_Ridgeview_G.jpg?1558125795",
+            "available_communities":[
+                {
+                    "id":6,
+                    "name":"Meadow Park"
+                },
+                {
+                    "id":7,
+                    "name":"Northeast Crossing"
+                },
+                {
+                    "id":9,
+                    "name":"Preston Estates"
+                },
+                {
+                    "id":5,
+                    "name":"Summerhill"
+                },
+                {
+                    "id":1,
+                    "name":"Texas Research Park"
+                }
+            ]
+        },
+        {
+            "id":1,
+            "collection_id":1,
+            "name":"The Chateau",
+            "min_price":"390990.0",
+            "min_sqft":3581,
+            "min_width":50,
+            "min_depth":70,
+            "min_bedrooms":"5.0",
+            "max_bedrooms":"6.0",
+            "min_bathrooms":"3.5",
+            "max_bathrooms":"4.0",
+            "min_garage":"3.0",
+            "max_garage":"3.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":242,
+            "is_published":true,
+            "page_slug":"The-Chateau-New-Braunfels-Comal-Texas-78130",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/1/mobile_full_Chateau_A.jpg?1558125773",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/1/mobile_half_Chateau_A.jpg?1558125773",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/1/mobile_thumbnail_Chateau_A.jpg?1558125773",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/1/desktop_full_Chateau_A.jpg?1558125773",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/1/desktop_half_Chateau_A.jpg?1558125773",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/1/desktop_thumbnail_Chateau_A.jpg?1558125773",
+            "available_communities":[
+                {
+                    "id":8,
+                    "name":"Highland Grove Platinum Series"
+                }
+            ]
+        },
+        {
+            "id":8,
+            "collection_id":1,
+            "name":"The Sterling",
+            "min_price":"244990.0",
+            "min_sqft":1966,
+            "min_width":39,
+            "min_depth":71,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"5.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"3.0",
+            "min_garage":"2.0",
+            "max_garage":"3.0",
+            "min_stories":"1.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":231,
+            "is_published":true,
+            "page_slug":"The-Sterling-Comal-Texas-78130",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/8/mobile_full_Sterling_D.jpg?1558125817",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/8/mobile_half_Sterling_D.jpg?1558125817",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/8/mobile_thumbnail_Sterling_D.jpg?1558125817",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/8/desktop_full_Sterling_D.jpg?1558125817",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/8/desktop_half_Sterling_D.jpg?1558125817",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/8/desktop_thumbnail_Sterling_D.jpg?1558125817",
+            "available_communities":[
+                {
+                    "id":9,
+                    "name":"Preston Estates"
+                },
+                {
+                    "id":13,
+                    "name":"Cypress Point"
+                },
+                {
+                    "id":12,
+                    "name":"Cloud Country"
+                },
+                {
+                    "id":11,
+                    "name":"Highland Grove"
+                }
+            ]
+        },
+        {
+            "id":40,
+            "collection_id":4,
+            "name":"Walsh",
+            "min_price":"202490.0",
+            "min_sqft":2172,
+            "min_width":34,
+            "min_depth":57,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"5.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"2.5",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":116,
+            "is_published":true,
+            "page_slug":"Walsh-Bexar-Texas-78152",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/40/mobile_full_RC-Walsh-Home.jpg?1551589148",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/40/mobile_half_RC-Walsh-Home.jpg?1551589148",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/40/mobile_thumbnail_RC-Walsh-Home.jpg?1551589148",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/40/desktop_full_RC-Walsh-Home.jpg?1551589148",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/40/desktop_half_RC-Walsh-Home.jpg?1551589148",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/40/desktop_thumbnail_RC-Walsh-Home.jpg?1551589148",
+            "available_communities":[
+                {
+                    "id":32,
+                    "name":"Texas Research Park"
+                },
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":26,
+                    "name":"Heathers Place"
+                },
+                {
+                    "id":28,
+                    "name":"Heritage Oaks"
+                },
+                {
+                    "id":29,
+                    "name":"Horizon Pointe - Commons"
+                }
+            ]
+        },
+        {
+            "id":37,
+            "collection_id":4,
+            "name":"Raleigh",
+            "min_price":"199490.0",
+            "min_sqft":1852,
+            "min_width":41,
+            "min_depth":61,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":158,
+            "is_published":true,
+            "page_slug":"Raleigh-Bexar-Texas-78109",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/37/mobile_full_RC-Raleigh-Home.jpg?1551589257",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/37/mobile_half_RC-Raleigh-Home.jpg?1551589257",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/37/mobile_thumbnail_RC-Raleigh-Home.jpg?1551589257",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/37/desktop_full_RC-Raleigh-Home.jpg?1551589257",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/37/desktop_half_RC-Raleigh-Home.jpg?1551589257",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/37/desktop_thumbnail_RC-Raleigh-Home.jpg?1551589257",
+            "available_communities":[
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":31,
+                    "name":"Horizon Pointe - Reserve"
+                }
+            ]
+        },
+        {
+            "id":39,
+            "collection_id":4,
+            "name":"Springwood",
+            "min_price":"187490.0",
+            "min_sqft":1917,
+            "min_width":34,
+            "min_depth":44,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"2.5",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":168,
+            "is_published":true,
+            "page_slug":"Springwood-San-Antonio-Bexar-Texas-78205",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/39/mobile_full_RC-Springwood-Home2.jpg?1551589081",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/39/mobile_half_RC-Springwood-Home2.jpg?1551589081",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/39/mobile_thumbnail_RC-Springwood-Home2.jpg?1551589081",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/39/desktop_full_RC-Springwood-Home2.jpg?1551589081",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/39/desktop_half_RC-Springwood-Home2.jpg?1551589081",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/39/desktop_thumbnail_RC-Springwood-Home2.jpg?1551589081",
+            "available_communities":[
+                {
+                    "id":24,
+                    "name":"Crossings at Westlakes"
+                },
+                {
+                    "id":26,
+                    "name":"Heathers Place"
+                },
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":28,
+                    "name":"Heritage Oaks"
+                },
+                {
+                    "id":29,
+                    "name":"Horizon Pointe - Commons"
+                },
+                {
+                    "id":32,
+                    "name":"Texas Research Park"
+                }
+            ]
+        },
+        {
+            "id":12,
+            "collection_id":2,
+            "name":"Courtman",
+            "min_price":"473990.0",
+            "min_sqft":3868,
+            "min_width":69,
+            "min_depth":84,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"3.5",
+            "max_bathrooms":"3.5",
+            "min_garage":"3.0",
+            "max_garage":"3.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":284,
+            "is_published":true,
+            "page_slug":"Courtman-Bexar-Texas-78152",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/12/mobile_full_Courtman_A.jpg?1558130367",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/12/mobile_half_Courtman_A.jpg?1558130367",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/12/mobile_thumbnail_Courtman_A.jpg?1558130367",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/12/desktop_full_Courtman_A.jpg?1558130367",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/12/desktop_half_Courtman_A.jpg?1558130367",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/12/desktop_thumbnail_Courtman_A.jpg?1558130367",
+            "available_communities":[
+                {
+                    "id":17,
+                    "name":"Potranco Ranch"
+                },
+                {
+                    "id":18,
+                    "name":"Reserve at Schertz"
+                },
+                {
+                    "id":16,
+                    "name":"Hunters Way"
+                },
+                {
+                    "id":19,
+                    "name":"Setterfeld Estates"
+                }
+            ]
+        },
+        {
+            "id":44,
+            "collection_id":5,
+            "name":"Nolan",
+            "min_price":"339950.0",
+            "min_sqft":2207,
+            "min_width":49,
+            "min_depth":60,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"2.5",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":351,
+            "is_published":true,
+            "page_slug":"Nolan-Round-Rock-Williamson-Texas-78665",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/44/mobile_full_Nolan_A.jpg?1558128539",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/44/mobile_half_Nolan_A.jpg?1558128539",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/44/mobile_thumbnail_Nolan_A.jpg?1558128539",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/44/desktop_full_Nolan_A.jpg?1558128539",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/44/desktop_half_Nolan_A.jpg?1558128539",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/44/desktop_thumbnail_Nolan_A.jpg?1558128539",
+            "available_communities":[
+                {
+                    "id":35,
+                    "name":"Diamond Oaks"
+                },
+                {
+                    "id":36,
+                    "name":"Gardens at Mayfield Ranch"
+                }
+            ]
+        },
+        {
+            "id":16,
+            "collection_id":2,
+            "name":"Marion",
+            "min_price":"256990.0",
+            "min_sqft":2576,
+            "min_width":50,
+            "min_depth":62,
+            "min_bedrooms":"4.0",
+            "max_bedrooms":"4.0",
+            "min_bathrooms":"2.5",
+            "max_bathrooms":"2.5",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"2.0",
+            "max_stories":"2.0",
+            "default_vr_scene_id":266,
+            "is_published":true,
+            "page_slug":"Marion-Bexar-Texas-78109",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/16/mobile_full_Marion_A.jpg?1558131376",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/16/mobile_half_Marion_A.jpg?1558131376",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/16/mobile_thumbnail_Marion_A.jpg?1558131376",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/16/desktop_full_Marion_A.jpg?1558131376",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/16/desktop_half_Marion_A.jpg?1558131376",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/16/desktop_thumbnail_Marion_A.jpg?1558131376",
+            "available_communities":[
+                {
+                    "id":15,
+                    "name":"Horizon Pointe - Enclave"
+                },
+                {
+                    "id":22,
+                    "name":"Turning Stone"
+                }
+            ]
+        },
+        {
+            "id":31,
+            "collection_id":4,
+            "name":"Armstrong",
+            "min_price":"167490.0",
+            "min_sqft":1208,
+            "min_width":34,
+            "min_depth":58,
+            "min_bedrooms":"3.0",
+            "max_bedrooms":"3.0",
+            "min_bathrooms":"2.0",
+            "max_bathrooms":"2.0",
+            "min_garage":"2.0",
+            "max_garage":"2.0",
+            "min_stories":"1.0",
+            "max_stories":"1.0",
+            "default_vr_scene_id":85,
+            "is_published":true,
+            "page_slug":"Armstrong-San-Antonio-Bexar-Texas-78205",
+            "has_vr":true,
+            "image_mobile_full":"https://assets-production.myhouseby.com/paperclip/plans/31/mobile_full_RC-Armstrong-Home.jpg?1558133938",
+            "image_mobile_half":"https://assets-production.myhouseby.com/paperclip/plans/31/mobile_half_RC-Armstrong-Home.jpg?1558133938",
+            "image_mobile_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/31/mobile_thumbnail_RC-Armstrong-Home.jpg?1558133938",
+            "image_desktop_full":"https://assets-production.myhouseby.com/paperclip/plans/31/desktop_full_RC-Armstrong-Home.jpg?1558133938",
+            "image_desktop_half":"https://assets-production.myhouseby.com/paperclip/plans/31/desktop_half_RC-Armstrong-Home.jpg?1558133938",
+            "image_desktop_thumbnail":"https://assets-production.myhouseby.com/paperclip/plans/31/desktop_thumbnail_RC-Armstrong-Home.jpg?1558133938",
+            "available_communities":[
+                {
+                    "id":24,
+                    "name":"Crossings at Westlakes"
+                },
+                {
+                    "id":26,
+                    "name":"Heathers Place"
+                },
+                {
+                    "id":27,
+                    "name":"Heights at Saengerhalle"
+                },
+                {
+                    "id":28,
+                    "name":"Heritage Oaks"
+                },
+                {
+                    "id":29,
+                    "name":"Horizon Pointe - Commons"
+                },
+                {
+                    "id":32,
+                    "name":"Texas Research Park"
+                }
+            ]
+        }
+    ]
+} // plans does not have any reference to builderID
+const builderID = 3; // Rausch Coleman
+const commID = 32; // Texas Research Park
+function findIfPlanIsInComm(plan) {
+        let exists = false;
+        for (i = 0; i < plan.available_communities.length; i += 1)  {
+            if (plan.available_communities[i].id === commID) {
+                exists = true;
+            }
+        }
+        return exists;
+};
+const result = plans.results.filter(plan => findIfPlanIsInComm(plan));
+console.log(result);
+
+// findIfPlanIsInCommunity(plan) {
+//     // check if at least one object in plan.communities has id === commID
+//     let exists = false
+//     for (comm in plan.communities) {
+//         // check if community IDs match
+//         // if so, set exists to true and break for loop
+//     }
+//     return exists
+// }
+
+
+// const things = [42, 54, 12];
+
+// function checkIfUnder50(number) {
+//     return number < 50;
+// }
+//
+// const result = things.filter(thing => checkIfUnder50(thing));
+// console.log(result);
+
+
 const vm = new Vue({
     el: '#app',
 
@@ -445,35 +1346,40 @@ const vm = new Vue({
 });
 
 
-function loadJSON(callback) {
-
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'plans.json', false); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.response);
-        }
-    };
-    xobj.send(null);
-}
-
-loadJSON(results  => {
-    console.log(JSON.parse(results));
-})
-
-const fruits = ["apple", "banana", "jackfruit", "honeycrips"];
-
-const afruits = fruits.filter(fruit => {
-    return fruit.indexOf("a") >= 0;
-});
-
-console.log(afruits);
-
-
-
-
-
-//Mock data for the value of BTC in USD - (Can go after results: )
+// function loadJSON(callback) {
+//
+//     var xobj = new XMLHttpRequest();
+//     xobj.overrideMimeType("application/json");
+//     xobj.open('GET', 'http://api.myhouseby.com/plans', true); // Replace 'my_data' with the path to your file
+//     xobj.onreadystatechange = function () {
+//         if (xobj.readyState == 4 && xobj.status == "200") {
+//             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+//             callback(xobj.response);
+//         }
+//     };
+//     xobj.send(null);
+// }
+//
+// const plans = loadJSON(results  => {
+//     console.log(JSON.parse(results));
+// });
+//
+// console.log(plans);
+//
+// const fruits = ["apple", "banana", "jackfruit", "honeycrips"];
+//
+// const afruits = fruits.filter(fruit => {
+//     return fruit.indexOf("a") >= 0;
+// });
+//
+// console.log(afruits);
+//
+// for (let i = 0; i < 5; i++) {
+//     console.log('Hello World')
+// }
+//
+//
+//
+//
+// //Mock data for the value of BTC in USD - (Can go after results: )
 //{"BTC": {"USD":3759.91,"EUR":3166.21}, "ETH": {"USD":281.7,"EUR":236.25}, "NEW Currency": {"USD": 5.60, "EUR": 4.70}
