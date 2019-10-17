@@ -412,7 +412,8 @@ const rauschColemanComms = {
             "schools": []
         }
     ]
-}
+};
+
 for (i in rauschColemanComms.communities) {
     x = rauschColemanComms.communities[i].name;
     // console.log(x);
@@ -1295,8 +1296,8 @@ const plans = {
     ]
 } // plans does not have any reference to builderID
 const builderID = 3; // Rausch Coleman
-const commID = 32; // Texas Research Park
-function findIfPlanIsInComm(plan) {
+// const commID = 32; // Texas Research Park
+function findIfPlanIsInComm(plan, commID) {
         let exists = false;
         for (i = 0; i < plan.available_communities.length; i += 1)  {
             if (plan.available_communities[i].id === commID) {
@@ -1305,8 +1306,13 @@ function findIfPlanIsInComm(plan) {
         }
         return exists;
 };
-const result = plans.results.filter(plan => findIfPlanIsInComm(plan));
-console.log(result);
+// const result = plans.results.filter(plan => findIfPlanIsInComm(plan));
+// console.log(result);
+
+const getPlansFromCommID = (commID) => {
+    return plans.results.filter(plan => findIfPlanIsInComm(plan, commID));
+};
+
 
 // findIfPlanIsInCommunity(plan) {
 //     // check if at least one object in plan.communities has id === commID
@@ -1331,12 +1337,17 @@ console.log(result);
 
 const vm = new Vue({
     el: '#app',
-
     data: {
         rauschColemanComms: {},
+        communityPlans: [],
     },
     mounted() {
         this.rauschColemanComms = rauschColemanComms;
+    },
+    methods: {
+        getPlans: function (commID) {
+            return getPlansFromCommID(commID)
+        }
     }
     // mounted() {
     //     axios.get(cryptoURL).then(builders => {

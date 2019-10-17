@@ -5,13 +5,12 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
     <meta charset="utf-8">
-    <title>Cryptocurrency Pricing Application</title>
+    <title>Builder Communities Status</title>
 </head>
 
 <body>
 <div class="container" id="app">
     <h3 class="text-center">{{ rauschColemanComms.name }} Communities</h3>
-
     <div class="columns medium-4" v-for="community in rauschColemanComms.communities">
         <div class="card">
             <div class="card-section">
@@ -26,8 +25,9 @@
 
 
             </div>
-            <div class="card-divider">
-                <p>PLANS & BASE PRICES</p>
+            <div class="card-divider" v-for="plan in getPlans(community.id)">
+                <img v-bind:src=plan.image_desktop_thumbnail>
+                <p>{{ plan.name }} | <strong>Base Price ${{ plan.min_price }}</strong> {{ plan.id }}</p>
             </div>
         </div>
     </div>
